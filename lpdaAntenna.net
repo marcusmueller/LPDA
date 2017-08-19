@@ -1,0 +1,45 @@
+(export (version D)
+  (design
+    (source /home/b4um/Documents/AFU/LDPA/ldpaAntenna.sch)
+    (date "Thu 17 Aug 2017 09:32:58 PM CEST")
+    (tool "Eeschema 4.0.6-e0-6349~53~ubuntu16.04.1")
+    (sheet (number 1) (name /) (tstamps /)
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source ldpaAntenna.sch)
+        (comment (number 1) (value ""))
+        (comment (number 2) (value ""))
+        (comment (number 3) (value ""))
+        (comment (number 4) (value "")))))
+  (components
+    (comp (ref TP2)
+      (value TEST)
+      (footprint Measurement_Points:Measurement_Point_Square-SMD-Pad_Small)
+      (libsource (lib device) (part TEST))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5995ED13))
+    (comp (ref TP1)
+      (value TEST)
+      (footprint Measurement_Points:Measurement_Point_Square-SMD-Pad_Small)
+      (libsource (lib device) (part TEST))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5995ED67)))
+  (libparts
+    (libpart (lib device) (part TEST)
+      (description "Testpoint, connection for test equipment")
+      (fields
+        (field (name Reference) TP)
+        (field (name Value) TEST))
+      (pins
+        (pin (num 1) (name ~) (type passive)))))
+  (libraries
+    (library (logical device)
+      (uri /usr/share/kicad/library/device.lib)))
+  (nets
+    (net (code 1) (name HF)
+      (node (ref TP2) (pin 1)))
+    (net (code 2) (name GND)
+      (node (ref TP1) (pin 1)))))
